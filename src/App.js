@@ -1,10 +1,15 @@
 import React from 'react'
+import { Provider } from 'react-redux';
+import { configureReducer } from './redux';
 import Router from './router/Router'
 
+const store=configureReducer();
 const App = () => {
   return (
     <>
-      <Router/>
+      <Provider store={store}>
+        <Router/>
+      </Provider>
     </>
   )
 }

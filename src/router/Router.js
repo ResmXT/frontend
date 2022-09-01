@@ -6,6 +6,7 @@ import Home from '../components/Home/Home'
 import HomeContent from '../components/Home/HomeContent'
 import Login from '../components/Login/Login'
 import SignUp from '../components/Login/SignUp'
+import SignUpContainer from '../view/SignUpView/SignUpContainer'
 
 const Router = () => {
   return (
@@ -13,7 +14,7 @@ const Router = () => {
         <Routes>
             <Route path='/' element={<HomeContent/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path='/signup' element={<SignUp/>}/>
+            <Route path='/signup' element={<SignUpContainer/>}/>
             <Route path='/editor' element={<EditorContent/>}/>
         </Routes>
     </BrowserRouter>

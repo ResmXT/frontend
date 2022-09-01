@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import {useDispatch} from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import {MdEmail} from 'react-icons/md'
 import {RiLockPasswordFill} from 'react-icons/ri'
 import {BsFillPersonFill} from 'react-icons/bs'
+import { onUserRegisterAction } from '../../redux/action/user'
 
 const SignUp = () => {
     const [email,setEmail]=useState("");
@@ -9,8 +12,14 @@ const SignUp = () => {
     const [password,setPassward]=useState("");
     const [cPass,setCPass]=useState("");
     const [error,showError]=useState(false);
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
+
+    const redirect=()=>{
+        navigate('/')
+    }
     const onSignUp=()=>{
-        console.log("hello");
+        dispatch(onUserRegisterAction({email,username,password},redirect))
     }
   return (
     <div>
