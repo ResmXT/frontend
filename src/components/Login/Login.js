@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 import {MdEmail} from 'react-icons/md'
 import {RiLockPasswordFill} from 'react-icons/ri'
+import { useDispatch } from 'react-redux';
+import { onUserLogin } from '../../redux/action/user';
 
 const Login = () => {
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     const [loginErr,setLoginErr]=useState(false);
+
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
+    const redirect=()=>{
+        navigate("/");
+    }
     const onLogin= async ()=>{
-        console.log("hello");
+        dispatch(onUserLogin({email,password},redirect))
     }
   return (
     <div>
@@ -32,7 +41,7 @@ const Login = () => {
 
                         </div>
                         <div className={loginErr ? "text-[red] mb-10" : "invisible mb-10"}>Invalid credentials</div>
-                        <button className=" mb-10 px-10 py-3 bg-[#6759C8] text-white rounded-full cursor-pointer hover:bg-[#5c4fb3]" onClick={onLogin}>Log in</button>
+                        <button  className=" mb-10 px-10 py-3 bg-[#6759C8] text-white rounded-full cursor-pointer hover:bg-[#5c4fb3]" onClick={onLogin}>Log in</button>
                         <div className="">Don't have an account ? <span className='text-[#6759C8]'>
                             </span></div>
                     </div>

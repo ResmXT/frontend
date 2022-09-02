@@ -1,8 +1,10 @@
-import { USER, USER_REGISTER_PENDING } from "../action/user/type"
+import { GET_USER_PENDING, USER, USER_LOGIN_PENDING, USER_REGISTER_PENDING } from "../action/user/type"
 
 const initialState={
     user:null,
-    isRegisterPending:false
+    isRegisterPending:false,
+    isLoginPending:false,
+    getUserPending:false
 }
 export const userReducer=(state=initialState,{type,payload})=>{
     switch(type){
@@ -15,6 +17,16 @@ export const userReducer=(state=initialState,{type,payload})=>{
             return {
                 ...state,
                 isRegisterPending:payload
+            }
+        case USER_LOGIN_PENDING:
+            return {
+                ...state,
+                isLoginPending:payload
+            }
+        case GET_USER_PENDING:
+            return {
+                ...state,
+                getUserPending:payload
             }
         default:
            {
