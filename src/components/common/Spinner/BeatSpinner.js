@@ -8,7 +8,7 @@ const BeatSpinner = ({ isLoading }) => {
       {isLoading && (
         <div className="z-[100] fixed translate-x-[-50%]  top-0 left-2/4 m-auto backdrop-blur-sm bg-black/30 h-[100vh] w-[100vw] rounded flex justify-center items-center">
           <div className="flex">
-            <BeatLoader color="#6759C8" loading={isLoading} size={20} />
+            <BeatLoader color="#9B39DB" loading={isLoading} size={20} />
           </div>
         </div>
       )}

@@ -8,12 +8,12 @@ const Home = () => {
             <div className="h-full flex justify-between items-center px-24 container mx-auto">
                 <div className="">
                     <div className="text-white text-[50px] pt-20 font-medium tracking-wide">
-                        The <span className='text-[#fc00ff] '>online</span> resume <br/> builder  build <br/> your <span className='text-[#6759C8] '>resume for free</span> 
+                        The <span className='bg-gradient-to-r  from-[#6759C8]  to-[#fc00ff] bg-clip-text text-transparent '>online</span> resume <br/> builder  build <br/>
                     </div>
 
                     <Link to="/editor">
-                        <div className="relative w-fit px-8 py-3 mt-10 bg-gradient-to-r  from-[#6759C8]  to-[#fc00ff]    hover:px-10 transition-all z-10  rounded-full text-white cursor-pointer tracking-wide">
-                            Create your resume
+                        <div className="relative w-fit p-0.5 mt-10 bg-gradient-to-r  from-[#6759C8]  to-[#fc00ff]  z-10  rounded-full text-white cursor-pointer tracking-wide">
+                            <div className="py-3 px-5 bg-[#15171a] rounded-full hover:bg-black transition-all">Create your resume</div>
                         </div>
                     </Link>
                 </div>

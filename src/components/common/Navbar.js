@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link,useLocation } from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 import {IoIosCreate} from 'react-icons/io'
@@ -7,16 +7,22 @@ import {CgNotes} from 'react-icons/cg'
 import { useDispatch, useSelector } from 'react-redux'
 import Profile from './Profile'
 import { onGetUser } from '../../redux/action/user'
+import ProfileDropDown from './Dropdown/ProfileDropDown'
 
 
 
 const Navbar = ({user}) => {
+  const [dropdown,setDropdown]=useState(false);
+  const onToggleDropdown=()=>{
+    setDropdown(!dropdown);
+  }
+  console.log(dropdown);
   const location=useLocation();
-  const navItem='mx-8 text-white cursor-pointer hover:text-[#6759C8]';
-  const activeNav='mx-8 text-[#6759C8] cursor-pointer'
+  const navItem='mx-8 text-gray-500 cursor-pointer hover:text-white';
+  const activeNav='mx-8 text-white cursor-pointer'
   return (
-    <div className='w-full flex justify-center'>
-        <div className="h-[60px] w-full bg-[#15171a] px-24 z-20 fixed border-b-2 border-[#191724] container">
+    <div className='w-screen flex justify-center bg-[#15171a]'>
+        <div className="h-[60px] w-full bg-[#15171a] px-24 z-20 fixed  container">
             <div className="">
               <div className="h-[60] flex justify-between items-center">
                 <div className="">
@@ -43,14 +49,11 @@ const Navbar = ({user}) => {
                     </div>
                   </div>
                 </div>
-                <div className="">
+                <div className="relative">
                   {user ? (
                 
-                    <div className="text-white hover:text-[#6759C8] group">
+                    <div className="text-white hover:text-[#6759C8] group" onClick={onToggleDropdown}>
                     <Profile letter={user.username.charAt(0).toUpperCase()}/>
-                    {/* <div className="group-hover:opacity-100 opacity-0">
-                    <ProfileDropDown/>
-                    </div> */}
                   </div>
                   ) : (
                    <Link to="/login">
@@ -59,6 +62,9 @@ const Navbar = ({user}) => {
                        </div>
                    </Link>
                   )}
+                  <div className={dropdown ? "absolute right-0 top-12" : "hidden"} >
+                      <ProfileDropDown onToggleDropdown={onToggleDropdown}/>
+                    </div>
                 </div>
               </div>
             </div>
