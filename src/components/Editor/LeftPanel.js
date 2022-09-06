@@ -21,15 +21,18 @@ const LeftPanel = ({user}) => {
       setActiveTab(tabName);
       const tab=document.getElementsByClassName('tab');
       for(let i=0;i<tab.length;i++){
-        tab[i].className=tab[i].className.replace('bg-[#6759C8]','');
+        tab[i].className=tab[i].className.replace('bg-slate-200','');
+        tab[i].className=tab[i].className.replace('text-black','');
       }
       let item=document.getElementById(tabName);
-      item.className+=" bg-[#6759C8]";
+      item.className+=" bg-slate-200 ";
+      item.className+=" text-black ";
+
     }
   return (
     <div>
         <div className="w-[20%] h-screen fixed left-0 top-0 bg-[#15171a]  -z-10 pt-[100px] border-r-2 border-[#191724]">
-            <div id="basic_info" className="w-[85%] m-auto py-3 text-left pl-8 rounded-md text-white cursor-pointer tab bg-[#6759C8]" onClick={()=>activeTabBg('basic_info')}><BsFillPersonFill className='inline-block mb-1 mr-4'/>Basic Info</div>
+            <div id="basic_info" className="w-[85%] m-auto py-3 text-left pl-8 rounded-md text-white text-black cursor-pointer tab bg-slate-200" onClick={()=>activeTabBg('basic_info')}><BsFillPersonFill className='inline-block mb-1 mr-4 '/>Basic Info</div>
             <div id="education" className="w-[85%] m-auto py-3 text-left pl-8 rounded-md text-white cursor-pointer tab" onClick={()=>activeTabBg('education')}><MdSchool className='inline-block mb-1 mr-4'/>Education</div>
             <div id="work" className="w-[85%] m-auto py-3 text-left pl-8 rounded-md text-white cursor-pointer tab" onClick={()=>activeTabBg('work')}><MdWork className='inline-block mb-1 mr-4'/>Work experience</div>
             <div id="skills" className="w-[85%] m-auto py-3 text-left pl-8 rounded-md text-white cursor-pointer tab" onClick={()=>activeTabBg('skills')}><HiCode className='inline-block mb-1 mr-4'/>Skills</div>

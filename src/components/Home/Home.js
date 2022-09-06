@@ -8,7 +8,7 @@ const Home = () => {
             <div className="h-full flex justify-between items-center px-24 container mx-auto">
                 <div className="">
                     <div className="text-white text-[50px] pt-20 font-medium tracking-wide">
-                        The <span className='bg-gradient-to-r  from-[#6759C8]  to-[#fc00ff] bg-clip-text text-transparent '>online</span> resume <br/> builder  build <br/>
+                        Build Your  <span className='bg-gradient-to-r  from-[#6759C8]  to-[#fc00ff] bg-clip-text text-transparent '>resume </span> <br/>online for free
                     </div>
 
                     <Link to="/editor">
