@@ -19,8 +19,7 @@ const Skills = ({user,changeTab,changeBG}) => {
     //     onPostSkills(skills,onChangeTab);
     // }
   return (
-    <div>
-        <div className="w-[80%] px-32 pt-[100px] absolute right-0 top-0 bg-[#15171a] min-h-screen -z-10">
+        <div className="w-[75vw] h-[700px] px-24 rounded-lg my-[18px] pt-5  bg-[#15171a]">
             <div className=" text-[#6759C8] text-lg mb-10">Skills</div>
             <div className="w-full">
                 <div className="w-full flex justify-between items-end">
@@ -38,7 +37,7 @@ const Skills = ({user,changeTab,changeBG}) => {
                 <div className="mt-10 flex flex-wrap pr-20">
                     {skills&& skills.map((e,idx)=>{
                         return (
-                        <div className="flex items-center w-fit  rounded-full px-5 py-2 bg-[#6759C8] mr-3" key={idx}>
+                        <div className="flex items-center w-fit  rounded-full px-5 py-2 bg-[#6759C8] mr-3 mb-3" key={idx}>
                             <div className="mr-2">{e}</div> <div className='w-3 pt-1 cursor-pointer' onClick={()=>removeSkills(idx)}><AiFillCloseCircle/></div>
                         </div>
                         )
@@ -49,7 +48,6 @@ const Skills = ({user,changeTab,changeBG}) => {
                 </div>
             </div>
         </div>
-    </div>
   )
 }
 

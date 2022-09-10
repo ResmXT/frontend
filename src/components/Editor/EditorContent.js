@@ -11,7 +11,7 @@ const EditorContent = () => {
     dispatch(onGetUser())
   }, []);
   return (
-    <div className='w-screen bg-[#15171a]'>
+    <div className='w-screen bg-black'>
         <Navbar user={user}/>
         <LeftPanel />
     </div>

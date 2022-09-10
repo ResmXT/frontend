@@ -21,8 +21,9 @@ const Navbar = ({user}) => {
   const navItem='mx-8 text-gray-500 cursor-pointer hover:text-white';
   const activeNav='mx-8 text-white cursor-pointer'
   return (
-    <div className='w-screen flex justify-center bg-[#15171a]'>
-        <div className="h-[60px] w-full bg-[#15171a] px-24 z-20 fixed  container">
+    <div className='w-[100%] bg-[#15171a]'>
+    <div className='w-full flex justify-center bg-[#15171a] container mx-auto'>
+        <div className="h-[60px] w-full bg-[#15171a] px-24 z-20">
             <div className="">
               <div className="h-[60] flex justify-between items-center">
                 <div className="">
@@ -69,6 +70,7 @@ const Navbar = ({user}) => {
               </div>
             </div>
         </div>
+    </div>
     </div>
   )
 }

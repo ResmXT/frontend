@@ -14,8 +14,7 @@ const Projects = ({user,changeTab,changeBG}) => {
     //     onPostProjects([{project_title,project_url,project_description}],onChangeTab)
     // }
   return (
-    <div>
-    <div className="w-[80%] px-32 pt-[100px] absolute right-0 top-0 bg-[#15171a] min-h-screen -z-10">
+    <div className="w-[75vw] h-[700px] px-24 rounded-lg my-[18px] pt-5  bg-[#15171a]">
         <div className=" text-[#6759C8] text-lg mb-10">Projects</div>
             <div className="w-full">
                 <div className="w-full">
@@ -50,7 +49,6 @@ const Projects = ({user,changeTab,changeBG}) => {
                 </div>
             </div>
     </div>
-</div>
   )
 }
 

@@ -14,8 +14,7 @@ const Social = ({user,changeTab,changeBG}) => {
     //   onPostSocial({linked_url,github_url},onChangeTab)
     // }
   return (
-    <div>
-    <div className="w-[80%] px-32 pt-[100px] absolute right-0 top-0 bg-[#15171a] min-h-screen -z-10">
+    <div className="w-[75vw] h-[700px] px-24 rounded-lg my-[18px] pt-5  bg-[#15171a]">
         <div className=" text-[#6759C8] text-lg mb-10">Social links</div>
            <div className="w-full flex mb-10">
             <div className="flex w-32 px-7 py-2 bg-[#6759C8] rounded-full items-center justify-center mr-20">
@@ -43,7 +42,6 @@ const Social = ({user,changeTab,changeBG}) => {
                   <button  className='py-2 px-7 bg-[#6759C8] rounded-full text-white'>Save & next</button>
                 </div>
     </div>
-</div>
   )
 }
 

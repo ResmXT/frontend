@@ -4,7 +4,7 @@ import Img from '../../assets/svg/Laptop.svg'
 const Home = () => {
   return (
     <div className=''>
-        <div className="relative h-[110vh] w-full ">
+        <div className="relative h-[100vh] w-full ">
             <div className="h-full flex justify-between items-center px-24 container mx-auto">
                 <div className="">
                     <div className="text-white text-[50px] pt-20 font-medium tracking-wide">
