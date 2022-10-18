@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Info = () => {
-  return (
-    <div className='h-[90vh] bg-slate-200 w-full'>
+  return <div className="h-[90vh] bg-slate-200 w-full"></div>;
+};
 
-    </div>
-  )
-}
-
-export default Info
+export default Info;

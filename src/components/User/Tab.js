@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 // import Achievements from './Achievements';
-import BasicInfo from '../User/UserTabs/BasicInfo'
+import BasicInfo from '../User/UserTabs/BasicInfo';
 import Achievements from './UserTabs/Achievements';
 import Education from './UserTabs/Education';
 import Projects from './UserTabs/Projects';
@@ -16,29 +16,35 @@ import Resume from './UserTabs/Resume';
 // import Template from './Template';
 // import Work from './Work';
 
-const Tab = ({activeTab,user,changeTab,changeBG}) => {
-  switch(activeTab){
+const Tab = ({ activeTab, user, changeTab, changeBG }) => {
+  switch (activeTab) {
     case 'basic_info':
-        return <BasicInfo user={user} changeTab={changeTab} changeBG={changeBG}/>;
+      return (
+        <BasicInfo user={user} changeTab={changeTab} changeBG={changeBG} />
+      );
     case 'education':
-        return <Education user={user} changeBG={changeBG} changeTab={changeTab}/>;
+      return (
+        <Education user={user} changeBG={changeBG} changeTab={changeTab} />
+      );
     case 'work':
-        return <Work user={user} changeBG={changeBG} changeTab={changeTab}/>;
+      return <Work user={user} changeBG={changeBG} changeTab={changeTab} />;
     case 'skills':
-        return <Skills user={user} changeBG={changeBG} changeTab={changeTab}/>;
+      return <Skills user={user} changeBG={changeBG} changeTab={changeTab} />;
     case 'projects':
-        return <Projects user={user} changeBG={changeBG} changeTab={changeTab}/>;
+      return <Projects user={user} changeBG={changeBG} changeTab={changeTab} />;
     case 'achievements':
-        return <Achievements user={user} changeBG={changeBG} changeTab={changeTab}/>;
+      return (
+        <Achievements user={user} changeBG={changeBG} changeTab={changeTab} />
+      );
     case 'social':
-        return <Social user={user} changeBG={changeBG} changeTab={changeTab}/>;
+      return <Social user={user} changeBG={changeBG} changeTab={changeTab} />;
     case 'template':
-        return <Template user={user} changeBG={changeBG} changeTab={changeTab}/>;
+      return <Template user={user} changeBG={changeBG} changeTab={changeTab} />;
     case 'my_resume':
-        return <Resume user={user} changeBG={changeBG} changeTab={changeTab}/>;
-    default :
-        return <></>;
+      return <Resume user={user} changeBG={changeBG} changeTab={changeTab} />;
+    default:
+      return <></>;
   }
-}
+};
 
-export default Tab
+export default Tab;

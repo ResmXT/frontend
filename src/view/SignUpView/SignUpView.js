@@ -1,10 +1,8 @@
-import React from 'react'
-import SignUpContainer from './SignUpContainer'
+import React from 'react';
+import SignUpContainer from './SignUpContainer';
 
 const SignUpView = () => {
-  return (
-    <SignUpContainer/>
-  )
-}
+  return <SignUpContainer />;
+};
 
-export default SignUpView
+export default SignUpView;
