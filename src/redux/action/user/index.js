@@ -17,7 +17,7 @@ import {
   USER_LOGOUT,
   USER_REGISTER_PENDING,
 } from './type';
-const url = 'http://localhost:5000/api/v1/user';
+const url = process.env.BACKEND_URL||'http://localhost:5000/api/v1/user';
 
 export const onUserRegisterAction = (value, cb) => {
   return dispatch => {
