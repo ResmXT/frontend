@@ -18,7 +18,6 @@ const initialState = {
   getUserPending: false,
 };
 export const userReducer = (state = initialState, { type, payload }) => {
-  console.log(payload);
   switch (type) {
     case USER:
       return {

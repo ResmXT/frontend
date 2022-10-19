@@ -2,7 +2,7 @@ import axios from 'axios';
 
 let apiClient = axios.create({
   baseURL:
-    process.env.BACKEND_URL || 'http://localhost:5000/api/v1/user',
+    process.env.REACT_APP_BASE_URL || 'http://localhost:5000/api/v1/user',
 });
 apiClient.interceptors.request.use(config => {
   const token = localStorage.getItem('jwt');
