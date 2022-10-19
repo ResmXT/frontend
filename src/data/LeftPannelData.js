@@ -35,11 +35,11 @@ export const leftPannelData = [
     title: 'Social links',
     icon: IoLinkSharp,
   },
-  {
-    id: 'template',
-    title: 'Choose template',
-    icon: HiOutlineTemplate,
-  },
+  // {
+  //   id: 'template',
+  //   title: 'Choose template',
+  //   icon: HiOutlineTemplate,
+  // },
   {
     id: 'my_resume',
     title: 'My resume',

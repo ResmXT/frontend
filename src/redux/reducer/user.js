@@ -1,9 +1,13 @@
 import {
   GET_USER_PENDING,
+  POST_ACHIEVEMENT_PENDING,
   POST_BASIC_INFO,
   POST_BASIC_INFO_PENDING,
   POST_EDUCATION,
   POST_EDUCATION_PENDING,
+  POST_PROJECT_PENDING,
+  POST_SKILLS_PENDING,
+  POST_SOCIAL_PENDIN,
   POST_WORK,
   POST_WORK_PENDING,
   USER,
@@ -16,6 +20,14 @@ const initialState = {
   isRegisterPending: false,
   isLoginPending: false,
   getUserPending: false,
+  postBasicInfoPending:false,
+  postEducationPending:false,
+  postWorkPending:false,
+  postSkillsPending:false,
+  postSocialPending:false,
+  postProjectPending:false,
+  postAchievementsPending:false,
+
 };
 export const userReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -58,7 +70,7 @@ export const userReducer = (state = initialState, { type, payload }) => {
     case POST_EDUCATION_PENDING:
       return {
         ...state,
-        postBasicInfoPendin: payload,
+        postEducationPending: payload,
       };
     case POST_WORK:
       return {
@@ -68,8 +80,28 @@ export const userReducer = (state = initialState, { type, payload }) => {
     case POST_WORK_PENDING:
       return {
         ...state,
-        postBasicInfoPendin: payload,
+        postWorkPending: payload,
       };
+      case POST_SKILLS_PENDING:
+        return {
+          ...state,
+          postSkillsPending: payload,
+        };
+      case POST_PROJECT_PENDING:
+          return {
+            ...state,
+            postProjectPending: payload,
+          };
+      case POST_SOCIAL_PENDIN:
+            return {
+              ...state,
+              postSocialPending: payload,
+            };
+      case POST_ACHIEVEMENT_PENDING:
+              return {
+                ...state,
+                postAchievementsPending: payload,
+              };
     default: {
       return state;
     }

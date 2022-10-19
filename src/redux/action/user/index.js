@@ -1,5 +1,6 @@
 import { apiClient } from '../../../services/apiClient';
 import { reduxAction } from '../base';
+import { toastAction } from '../toastAction';
 import {
   GET_USER_PENDING,
   POST_ACHIEVEMENT_PENDING,
@@ -85,6 +86,7 @@ export const onPostBasicInfo = (value, cb) => {
       .then(({ data }) => {
         dispatch(reduxAction(POST_BASIC_INFO, data.user));
         if (data) {
+          toastAction.success("Successfully saved")
           if (cb) {
             cb();
           }

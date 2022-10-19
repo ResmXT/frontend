@@ -21,7 +21,6 @@ const Navbar = ({ user }) => {
   const onToggleDropdown = () => {
     setDropdown(!dropdown);
   };
-  console.log(dropdown);
   const location = useLocation();
   const navItem = 'mx-8 text-gray-500 cursor-pointer hover:text-white';
   const activeNav = 'mx-8 text-white cursor-pointer';
