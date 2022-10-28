@@ -77,8 +77,12 @@ const Navbar = ({ user }) => {
                       location.pathname === '/templates' ? activeNav : navItem
                     }
                   >
-                    <HiOutlineTemplate className="inline-block mb-1 mr-2" />
+                  <Link to="/templates">
+                  <div className="">
+                      <HiOutlineTemplate className="inline-block mb-1 mr-2" />
                     Templates
+                  </div>
+                  </Link>
                   </div>
                   <div
                     className={

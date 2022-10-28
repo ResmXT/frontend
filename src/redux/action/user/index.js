@@ -29,12 +29,14 @@ export const onUserRegisterAction = (value, cb) => {
         dispatch(reduxAction(USER_REGISTER_PENDING, false));
         if (data) {
           localStorage.setItem('jwt', data.user.token);
+          toastAction.success("User registered successfully ")
           if (cb) {
             cb();
           }
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(USER_REGISTER_PENDING, false));
       });
   };
@@ -47,12 +49,14 @@ export const onUserLogin = (value, cb) => {
         dispatch(reduxAction(USER_LOGIN_PENDING, false));
         if (data) {
           localStorage.setItem('jwt', data.user.token);
+          toastAction.success("Logged in")
           if (cb) {
             cb();
           }
         }
       })
       .catch(() => {
+        toastAction.error("Incorrect username or password ")
         dispatch(reduxAction(USER_LOGIN_PENDING, false));
       });
   };
@@ -94,6 +98,7 @@ export const onPostBasicInfo = (value, cb) => {
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(POST_BASIC_INFO_PENDING, false));
       });
   };
@@ -106,6 +111,7 @@ export const onPostEducationInfo = (value, cb) => {
       .then(({ data }) => {
         dispatch(reduxAction(POST_EDUCATION, data.user));
         if (data) {
+          toastAction.success("Successfully saved")
           if (cb) {
             cb();
           }
@@ -113,6 +119,7 @@ export const onPostEducationInfo = (value, cb) => {
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(POST_EDUCATION_PENDING, false));
       });
   };
@@ -125,6 +132,7 @@ export const onPostWorkInfo = (value, cb) => {
       .then(({ data }) => {
         dispatch(reduxAction(POST_WORK, data.user));
         if (data) {
+          toastAction.success("Successfully saved")
           if (cb) {
             cb();
           }
@@ -132,6 +140,7 @@ export const onPostWorkInfo = (value, cb) => {
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(POST_WORK_PENDING, false));
       });
   };
@@ -144,6 +153,7 @@ export const postSkills = (value, cb) => {
       .then(({ data }) => {
         dispatch(reduxAction(USER, data.user));
         if (data) {
+          toastAction.success("Successfully saved")
           if (cb) {
             cb();
           }
@@ -151,6 +161,7 @@ export const postSkills = (value, cb) => {
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(POST_SKILLS_PENDING, false));
       });
   };
@@ -163,6 +174,7 @@ export const postProjects = (value, cb) => {
       .then(({ data }) => {
         dispatch(reduxAction(USER, data.user));
         if (data) {
+          toastAction.success("Successfully saved")
           if (cb) {
             cb();
           }
@@ -170,6 +182,7 @@ export const postProjects = (value, cb) => {
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(POST_PROJECT_PENDING, false));
       });
   };
@@ -181,6 +194,7 @@ export const postAchievements = (value, cb) => {
       .then(({ data }) => {
         dispatch(reduxAction(USER, data.user));
         if (data) {
+          toastAction.success("Successfully saved")
           if (cb) {
             cb();
           }
@@ -188,6 +202,7 @@ export const postAchievements = (value, cb) => {
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(POST_ACHIEVEMENT_PENDING, false));
       });
   };
@@ -200,6 +215,7 @@ export const postSocial = (value, cb) => {
       .then(({ data }) => {
         dispatch(reduxAction(USER, data.user));
         if (data) {
+          toastAction.success("Successfully saved")
           if (cb) {
             cb();
           }
@@ -207,6 +223,7 @@ export const postSocial = (value, cb) => {
         }
       })
       .catch(() => {
+        toastAction.error("Something went wrong!")
         dispatch(reduxAction(POST_SOCIAL_PENDIN, false));
       });
   };

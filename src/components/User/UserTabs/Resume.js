@@ -20,7 +20,7 @@ const Resume = ({ user, changeBG, changeTab }) => {
         </div>
       </div>
       <div id="resume" className="">
-        <div className="w-full aspect-[2/3] bg-white mb-10 px-16 py-16">
+        <div className="w-full aspect-[4/3] bg-white mb-10 px-16 py-16">
           <div className="">
             <div className="text-[30px] font-bold">
               {user?.basic_info?.full_name}
